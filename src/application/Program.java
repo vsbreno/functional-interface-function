@@ -20,7 +20,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		List<String> listUpper = list.stream().map(new UpperCase()).collect(Collectors.toList());
+		List<String> listUpper = list.stream().map(Product::nonStaticToUpperCase).collect(Collectors.toList());
 
 		listUpper.forEach(System.out::println);
 	}
